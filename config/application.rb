@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module SolidusShop
   class Application < Rails::Application
     # Load application's model / class decorators
+    config.i18n.default_locale = :uk
     initializer 'spree.decorators' do |app|
       config.to_prepare do
         Dir.glob(Rails.root.join('app/**/*_decorator*.rb')) do |path|
