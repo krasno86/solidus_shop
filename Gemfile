@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '2.7.2'
 
 gem 'rails', '~> 6.1.3'
 gem 'pg', '~> 1.1'
@@ -27,9 +27,9 @@ group :development do
   gem 'spring'
 end
 
-group :production do
-  gem 'pg', '~> 1.1'
-end
+# group :production do
+#   gem 'pg', '~> 1.1'
+# end
 
 group :test do
   gem 'capybara', '>= 3.26'
@@ -39,5 +39,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'solidus_auth_devise'
 gem 'solidus_auth_devise'
