@@ -118,6 +118,7 @@ GEM
       devise (>= 2.1.0)
     discard (1.2.0)
       activerecord (>= 4.2, < 7)
+    dotenv (2.7.6)
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.14.2)
@@ -395,6 +396,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  dotenv (~> 2.7, >= 2.7.6)
   jbuilder (~> 2.7)
   kaminari-i18n (~> 0.5.0)
   listen (~> 3.3)

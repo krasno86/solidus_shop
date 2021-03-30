@@ -2,7 +2,7 @@ class NovaPoshta
   def self.get_regions
     response = HTTParty.post('https://api.novaposhta.ua/v2.0/json/',
                              body: {
-                               'apiKey': '88031da1a44639a51d4bbd943bb81955',
+                               'apiKey': ENV['NOVA_POSHTA_API_KEY'],
                                'modelName': 'Address',
                                'calledMethod': 'getCities',
                                # "calledMethod": "getAreas",
@@ -17,7 +17,7 @@ class NovaPoshta
                              body: {
                                'modelName': 'AddressGeneral',
                                'calledMethod': 'getWarehouses',
-                               'apiKey': '88031da1a44639a51d4bbd943bb81955',
+                               'apiKey': ENV['NOVA_POSHTA_API_KEY'],
                                'methodProperties': {
                                  'CityName': region,
                                  'Limit': 100
